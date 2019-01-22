@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="hot"></div>
+	<div id="moderate"></div>
+	<div id="cold"></div>
+	<script>
+			var randomNumber=Math.floor((Math.random() * 41) -5);
+		//console.log(randomNumber);
+		document.write("Today we have " + randomNumber + " c." + "<br>");
+
+		if (randomNumber >= -5 && randomNumber <= 10 ) {
+			document.write("The weather is cold!");
+			document.getElementById("cold").innerHTML='<img src="img/cold.jpg" alt="">'
+		} else if (randomNumber > 10 &&  randomNumber < 32) {
+			document.write("The weather is moderate!");
+			document.getElementById("moderate").innerHTML= '<img src="img/moderate.jpg" alt="">'
+		} else {
+			document.write("The weather is really hot!")
+			document.getElementById("hot").innerHTML= '<img src="img/hot-weather.jpg" alt="">'
+		};
+	</script>
+</body>
+</html>
